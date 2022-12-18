@@ -1,0 +1,76 @@
+ <!-- Start Top-Nav Bar -->
+ <div class="top-nav " >
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-lg-3 py-4">
+                <div class="brand-name d-flex align-items-center">
+                    <img src="../../assets/images/logo.png" style="width:50px;height:50px">
+                    <a [routerLink]="['']" routerLinkActive="router-link-active" >Market</a>
+                </div>
+            </div>
+            <div class="col-6 col-lg-6 d-none d-lg-block py-4">
+                <div>
+                    <div class="input-group">
+                        <input #searchKeyword placeholder="Search... " type="text" class="form-control p-2" aria-label="Amount (to the nearest dollar)">
+<!-- 
+                        <input type="text" [(ngModel)]="searchInput" #searchbar (keyup)="search($event)" placeholder="Enter the name of your series"/>
+                                   
+                    <ul>
+                        <li *ngFor="let show of searchResult">
+                           <p> {{ show.name }}</p>
+                        </li>
+                      </ul>
+                        <button class="btn btn-primary input-group-text" (click)="search(this)">Go</button> -->
+
+                        <button class="btn btn-primary input-group-text" (click)="search(searchKeyword)"><i class="fa fa-search"></i></button>
+
+                    </div>
+                </div>
+                <!-- <app-search></app-search> -->
+            </div>
+            <div class="col-6 col-lg-3 text-end py-4">
+                <div class="icons text-end d-flex align-items-center justify-content-end">
+                    <ul class="list-unstyled d-flex  m-0">
+                        <li class="nav-item dropdown px-3 position-relative">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-light fa-user fa-2x"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li [hidden]="isLoggedIn" class=" dropdown-item PS-3"><a class="dropdown-item"  routerLink="/profile" routerLinkActive="router-link-active"><i class="fa-regular fa-user pe-1"></i> Guest</a></li>
+                              <li [hidden]="!isLoggedIn"  class=" dropdown-item PS-3" ><a class="dropdown-item"  routerLink="/profile" routerLinkActive="router-link-active"><i class="fa-regular fa-user pe-1"></i>{{ username}}</a></li>
+
+                              <li [hidden]="isLoggedIn"><a class="dropdown-item"  routerLink="/auth/login" routerLinkActive="router-link-active"><i class="fa-light fa-right-to-bracket"></i> Sign In</a></li>
+                              <li [hidden]="!isLoggedIn" class="dropdown-item "  style="cursor:pointer" id="liveToastBtn" (click)="logOut()"><i class="fa-light fa-arrow-right-from-bracket"></i> LogOut</li>
+                              
+                            </ul>
+                          </li>
+
+                        <li class="nav-item position-relative px-3">
+                           <a routerLink="/favourite" routerLinkActive="router-link-active" class="nav-link" ><i class="fa-light fa-heart fa-2x"></i></a>
+                           <span class="product-count position-absolute "*ngIf="favouriteCounter>0">{{favouriteCounter}}</span>
+                        </li>
+
+                        <li class="nav-item px-3 position-relative">
+                            <a class="nav-link"  routerLink="/cart" routerLinkActive="router-link-active"><i class="fa-light fa-cart-shopping fa-2x"></i></a>
+                            <span class="product-count position-absolute " *ngIf="cartCounter>0">{{cartCounter}}</span>
+                         </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                  <div class="toast-header">
+                    <img src="..." class="rounded me-2" alt="...">
+                    <strong class="me-auto">Bootstrap</strong>
+                    <small>11 mins ago</small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                  </div>
+                  <div class="toast-body">
+                    Hello, world! This is a toast message.
+                  </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>
+<!-- End To Nav-Bar -->

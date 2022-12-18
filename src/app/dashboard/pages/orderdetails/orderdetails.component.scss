@@ -1,0 +1,75 @@
+#main{
+    font-family: 'Nunito', sans-serif;
+
+    .order-details{
+
+        h2{
+            font-weight: 600;
+            color:red;
+        }
+        .order-action{
+            .order-status{
+
+            }
+        }
+
+        .order-shipping-info{
+            .box{
+                overflow: hidden;
+                .heading{
+                    background-color: #eee;
+                    .icon i{
+                        width:40px;
+                        height: 40px;
+                        text-align: center;
+                        line-height: 40px;
+                        background: #1d51c1;
+                        border-radius: 50%;
+                        color: #FFF;
+                    }
+                }
+            }
+           
+        }
+    }
+
+}
+// breadCrumb
+.breadcrumb  {
+    background:none !important;
+}
+.breadcrumb .breadcrumb-item a{
+    text-decoration: none;
+    background:none;
+}
+
+.icon-heading i{
+    width:40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background: #9a9a9a;
+    border-radius: 50%;
+    color: #FFF;
+}
+
+@media print {
+    .order-status{
+        display: none;
+    }
+    .breadcrumb{
+        display: none;
+    }
+    header{
+        display: none;
+    }
+    .btn{
+        display: none;
+    }
+
+
+}
+
+.table tr{
+    vertical-align: middle;
+}

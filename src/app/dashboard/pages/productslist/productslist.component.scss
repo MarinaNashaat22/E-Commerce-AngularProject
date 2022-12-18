@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+}
+.active-display-mode{
+    color: #FFF;
+    background-color: rgb(53, 32, 211);
+}
+#main{
+    .products{
+        .products-header{
+        .search-box{
+            width:300px;
+            input{
+                border: none;
+                outline: none;
+            }
+        }
+     
+    
+        }
+        .products-list{
+            .product-box {
+                .product-img{
+                    img{
+                        width: auto;
+                        height: 200px;
+                    }
+                }
+                .product-info{
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    .product-name{
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+
+                    }
+                }
+            }
+        }
+    }
+}
+// breadCrumb
+.breadcrumb  {
+    background:none !important;
+}
+.breadcrumb .breadcrumb-item a{
+    text-decoration: none;
+    background:none;
+}
+
